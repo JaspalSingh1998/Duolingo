@@ -1,20 +1,31 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import {Text, View, Image} from 'react-native';
+import styles from './App.styles';
 
-export default function App() {
+const App = () => {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+    <View style={styles.root}>
+      <Text style={styles.title}>Which of these is the "glass"?</Text>
+      <View style={styles.optionsContainer}>
+        <View style={styles.optionContainer}>
+          <Image resizeMode='contain' style={styles.optionImage} source={{uri: "https://fsmd-assets.s3.eu-west-1.amazonaws.com/duolingo/images/cup.png"}}/>
+          <Text style={styles.optionText}>Glass</Text>
+        </View>
+        <View style={styles.optionContainer}>
+          <Image resizeMode='contain' style={styles.optionImage} source={{uri: "https://fsmd-assets.s3.eu-west-1.amazonaws.com/duolingo/images/cup.png"}}/>
+          <Text style={styles.optionText}>Glass</Text>
+        </View>
+        <View style={styles.optionContainer}>
+          <Image resizeMode='contain' style={styles.optionImage} source={{uri: "https://fsmd-assets.s3.eu-west-1.amazonaws.com/duolingo/images/cup.png"}}/>
+          <Text style={styles.optionText}>Glass</Text>
+        </View>
+        <View style={styles.optionContainer}>
+          <Image resizeMode='contain' style={styles.optionImage} source={{uri: "https://fsmd-assets.s3.eu-west-1.amazonaws.com/duolingo/images/cup.png"}}/>
+          <Text style={styles.optionText}>Glass</Text>
+        </View>
+      </View>
     </View>
-  );
+  )
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
